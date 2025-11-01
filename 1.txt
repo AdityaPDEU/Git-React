@@ -1,1 +1,2 @@
-hello welcome 
+hello welcome  this is the fir st code in git hud 
+which i upload in my repo.
