@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "dat">
+    </div>
+    <script>
+        // asyync and await
+        let dv= document.getElementById('dat');
+        let fun = async()=>{
+            let data = await fetch ("https://randomuser.me/api/");
+            data= await data.json()
+            let na= data['results'][0]['name']['first'];
+            dv.innerHTML = na
+            // console.log(data);
+        }
+        setTimeout(()=>{
+            console.log("hello world");
+        },5000)// time in milli second
+
+        setInterval(() => {
+            console.log("Aditya")
+        }, 3000);
+
+        setInterval(() => {
+            console.log("lesgo")
+        }, 6000);
+        // fun();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;;
+            height: 500px;
+            background-color: rgb(156, 7, 235);
+            margin: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">react+aditya</div>
+    <div id="sec" class="gitreact aditya rishi"></div>
+
+    <div id="news"></div>
+    <button id="butt">change</button>
+    <script>
+        let sec=document.getElementById('sec');
+        sec.style.backgroundColor = "pink";
+        sec.classList.add('yellow');
+        let data = ["aditya" , "amit" , "rishi"]
+        let news = document.getElementById('news');
+        let butt = document.getElementById('butt');
+        let i = -1;
+        butt.addEventListener('click' , (e)=>{
+            i = (i+1)%data.length;
+            news.innerHTML = data[i];
+        });
+
+    </script>
+
+</body>
+</html>
